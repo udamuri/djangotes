@@ -1,0 +1,4 @@
+django
+requests
+pybase64
+pylint
