@@ -3,3 +3,4 @@ requests
 pybase64
 pylint
 django-tinymce
+mysqlclient
