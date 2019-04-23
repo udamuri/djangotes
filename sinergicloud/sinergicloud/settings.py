@@ -90,9 +90,14 @@ WSGI_APPLICATION = 'sinergicloud.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': {
-            'read_default_file': '/etc/mysql/my.cnf',
-        },
+        'NAME': 'django',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': '127.0.0.1',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
+        #'OPTIONS': {
+        #    'read_default_file': '/etc/mysql/my.cnf',
+        #},
     }
 }
 
