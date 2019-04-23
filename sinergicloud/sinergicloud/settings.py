@@ -33,6 +33,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     #'posts.apps.PostsConfig',
     #'blog.apps.BlogConfig',
+    #'karyawan.apps.KaryawanConfig',
+    #'kehadiran.apps.KehadiranConfig',
+    'posts.apps.PostsConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
