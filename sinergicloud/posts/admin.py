@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from posts.models import Post, Category
+from .models import Post, Category
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'user', 'slug')

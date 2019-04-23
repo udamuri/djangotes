@@ -33,8 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     #'posts.apps.PostsConfig',
     #'blog.apps.BlogConfig',
-    #'karyawan.apps.KaryawanConfig',
-    #'kehadiran.apps.KehadiranConfig',
+    'karyawan.apps.KaryawanConfig',
+    'kehadiran.apps.KehadiranConfig',
     'posts.apps.PostsConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',

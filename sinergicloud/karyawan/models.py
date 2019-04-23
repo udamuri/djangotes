@@ -1,21 +1,20 @@
 from __future__ import unicode_literals
 from django.conf import settings
 from django.db import models
-from django.contrib.auth.models import User
 
 # Create your models here.
 class Divisi (models.Model):
     nama = models.CharField(max_length=100)
     keterangan =models.TextField(blank=True)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.nama
 
 class Jabatan (models.Model):
     nama = models.CharField(max_length=100)
     keterangan = models.TextField(blank=True)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.nama
 
 class Karyawan (models.Model):
@@ -41,7 +40,7 @@ class Karyawan (models.Model):
     divisi = models.ForeignKey('Divisi', on_delete=models.CASCADE,)
     jabatan = models.ForeignKey('Jabatan', on_delete=models.CASCADE,)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.nama
 
 class Akun (models.Model):
@@ -50,9 +49,9 @@ class Akun (models.Model):
         ('admin', 'Administrator'),
     )
 
-    akun = models.ForeignKey('User', on_delete=models.CASCADE)
+    akun =  models.ForeignKey(settings.AUTH_USER_MODEL,default=1, on_delete=models.CASCADE)
     karyawan = models.ForeignKey('Karyawan', on_delete=models.CASCADE,)
     jenis_akun = models.CharField(max_length=20, choices=JENIS_AKUN_CHOICES)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.karyawan.nama
